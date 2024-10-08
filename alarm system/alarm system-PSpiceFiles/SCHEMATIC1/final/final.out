@@ -1,0 +1,241 @@
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "final.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/gh_ev/OneDrive/Desktop/fisierled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\gh_ev\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM sensor 7k 22k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECTFINALSPER
+R_R1         SENSOR VCC R_R1 7k TC=0,0 
+.model        R_R1 RES R=1 DEV=0.1% TC1=0 TC2=0
+V_V13         -VCC 0 -19V
+D_D1          ANOD CATOD led_rosu2 
+V_V12         VCC 0 19V
+R_R10         N30086 N28683 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1 DEV=0.1% TC1=0 TC2=0
+Q_Q2         CATOD N28683 0 Q2N930
+R_R11         ANOD VCC R_R11 850 TC=0,0 
+.model        R_R11 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_Rs         0 SENSOR R_Rs {sensor} TC=0,0 
+.model        R_Rs RES R=1 DEV=0.1% TC1=0 TC2=0
+X_U17A         SENSOR N29276 VCC -VCC N29276 UA798
+R_R2         N29276 N29441 R_R2 1k TC=0,0 
+.model        R_R2 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R3         0 N29441 R_R3 3.4k TC=0,0 
+.model        R_R3 RES R=1 DEV=0.1% TC1=0 TC2=0
+X_U17B         N29441 N29687 VCC -VCC N29705 UA798
+X_U18A         N34215 N29680 VCC -VCC N29680 LM324
+R_R6         VCC N34215 R_R6 1k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R7         0 N34215 R_R7 1k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R5         N29680 N29687 R_R5 1k TC=0,0 
+.model        R_R5 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R4         N29705 N29687 R_R4 3.4k TC=0,0 
+.model        R_R4 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R8         N29705 N30063 R_R8 673 TC=0,0 
+.model        R_R8 RES R=1 DEV=0.1% TC1=0 TC2=0
+R_R9         N30063 N30086 R_R9 1k TC=0,0 
+.model        R_R9 RES R=1 DEV=0.1% TC1=0 TC2=0
+V_V14         N30135 0 0.00597
+X_U19A         N30063 N30135 VCC -VCC N30086 UA798
+.PARAM  sensor=7k
+
+**** RESUMING final.cir ****
+.END
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               led_rosu2       X_U17A.dx       X_U17A.dy       X_U17B.dx       
+          IS   10.010000E-21  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    1.3854                                                       
+          RS    1.372100E-03                    1.000000E-03                 
+         CJO                                   10.000000E-12                 
+
+
+               X_U17B.dy       X_U18A.dx       X_U18A.dy       X_U19A.dx       
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03                 
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U19A.dy       
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N930          X_U17A.qx       X_U17B.qx       X_U18A.qx       
+               NPN             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS    5.911000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  578.3            30              30             166.7          
+          NF    1               1               1               1            
+         VAF   62.37                                                         
+         IKF     .0135                                                       
+         ISE    5.911000E-15                                                 
+          NE    1.32                                                         
+          BR    1.313           1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10                                                            
+          RE    0               0               0               0            
+          RC    1.61            0               0               0            
+         CJE    4.973000E-12    0               0               0            
+         VJE     .75             .75             .75             .75         
+         MJE     .4146                                                       
+         CJC    4.017000E-12    0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .3174           .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  819.800000E-12                                                 
+         XTF    7                                                            
+         VTF    4                                                            
+         ITF     .35                                                         
+          TR    4.701000E-09                                                 
+         XTB    1.5                                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.2             2.2          
+           D     .87             .52             .52             .52         
+
+
+               X_U19A.qx       
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   30            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R10           R_R11           R_Rs            
+           R    1               1               1               1            
+
+
+               R_R2            R_R3            R_R6            R_R7            
+           R    1               1               1               1            
+
+
+               R_R5            R_R4            R_R8            R_R9            
+           R    1               1               1               1            
+
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U18A.sw2      X_U18A.sw1      X_U18A.sw3      X_U18A.sw4      
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+
+          JOB CONCLUDED
+
+**** 06/30/24 20:15:15 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinals
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

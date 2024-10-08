@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-final"  [ c:\users\gh_ev\appdata\roaming\spb_data\cdssetup\workspace\projects\proiectfinalsper\proiectfinalsper-pspicefiles\schematic1\final.sim ] 
+
+** Creating circuit file "final.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/gh_ev/OneDrive/Desktop/fisierled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\gh_ev\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM sensor 7k 22k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
